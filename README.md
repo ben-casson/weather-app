@@ -4,6 +4,6 @@ This app displays details about the weather at the user's current location. Info
 <br>
 
 Weather app was built with:
-- Webpack (module bundler)
-- Sass (CSS preprocessor)
+- [Webpack](https://webpack.js.org/)
+- [Sass](https://sass-lang.com/)
 - [OpenWeather API](https://openweathermap.org/current)
