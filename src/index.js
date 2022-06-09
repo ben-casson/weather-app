@@ -1,5 +1,5 @@
 import './index.sass';
 import text from '../src/sidebar/sidebar';
 
-const div = document.querySelector('.div');
-div.appendChild(text);
+const pageContainer = document.getElementById('container');
+pageContainer.appendChild(text);
