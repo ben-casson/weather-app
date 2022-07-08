@@ -1,0 +1,9 @@
+@import '../globals.scss';
+  
+//try using mixins with conditionals for different themes, can toggle class when different type of weather is displayed
+//can also try 'extends' feature
+
+p {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
