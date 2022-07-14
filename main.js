@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _reset_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reset.scss */ \"./src/reset.scss\");\n/* harmony import */ var _components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sidebar */ \"./src/components/sidebar.js\");\n\n\nvar pageContainer = document.getElementById('container');\npageContainer.appendChild(_components_sidebar__WEBPACK_IMPORTED_MODULE_1__[\"default\"]); //--TODO--/////////////////////////////////////////////////////////////\n//make separate module for api key\n//use geolocation to get user's current location to use as default city\n//https://blog.logrocket.com/what-you-need-know-while-using-geolocation-api/\n//try geolocation-db.com???\n//start using git branches\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _reset_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reset.scss */ \"./src/reset.scss\");\n/* harmony import */ var _components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sidebar */ \"./src/components/sidebar.js\");\n\n\nvar pageContainer = document.getElementById('container');\npageContainer.appendChild(_components_sidebar__WEBPACK_IMPORTED_MODULE_1__[\"default\"]); //--TODO--/////////////////////////////////////////////////////////////\n//make separate module for api key\n//start using git branches\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ }),
 
