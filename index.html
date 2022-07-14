@@ -8,9 +8,29 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <div id="container">
-        <div id="main-content-container"></div>
-        <div id="sidebar-container"></div>
+    <div id="root">
+        <main>
+            <div id="main-content-container">
+                <div id="current-temperature-container">
+                    <p id="current-temperature-number"></p>
+                    <p id="current-temperature-unit" class="unit-of-temperature"></p>
+                </div>
+                <p id="current-location"></p>
+                <div id="high-low-temperature-container">
+                    <div id="high-temperature-container">
+                        <p class="high-temperature"></p>
+                        <p class="high-temperature-unit" class="unit-of-temperature"></p>
+                    </div>
+                    <div id="low-temperature-container">
+                        <p class="low-temperature"></p>
+                        <p class="low-temperature-unit" class="unit-of-temperature"></p>
+                    </div>
+                </div>
+                <div id="current-temperature-icon"></div>
+                <p id="current-temperature-status"></p>
+            </div>
+        </main>
+        <section id="search-and-extra-content-container"></section>
     </div>
 </body>
 </html>
