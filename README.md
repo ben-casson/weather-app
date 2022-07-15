@@ -1,5 +1,5 @@
 # weather-app
-This app displays details about the weather at the user's current location. Information about the weather in any city will be shown after searching for that city. 
+This app can display details about the weather in over 200,000 cities. Information about the weather a particular city will be shown after searching for that location. 
 
 <br>
 <br>
