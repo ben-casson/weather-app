@@ -4,7 +4,7 @@ This app can display details about the weather in over 200,000 cities. Informati
 <br>
 <br>
 
-Weather app was built with:
+### Technologies
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
 - [Sass](https://sass-lang.com/)
