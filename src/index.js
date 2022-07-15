@@ -1,5 +1,3 @@
-import './reset.scss';
-import text from './components/sidebar';
+import { fetchWeatherData } from "./api-functions";
 
-const pageContainer = document.getElementById('container');
-pageContainer.appendChild(text);
+fetchWeatherData('Chicago');
