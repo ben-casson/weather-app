@@ -1,1 +1,1 @@
-import './api-key.js';
+import API_KEY from "./api-key";
