@@ -14,8 +14,11 @@ const highTemperature = document.getElementById('high-temperature');
 const lowTemperature = document.getElementById('low-temperature');
 
 function updateMainDisplay(weatherObject) {
+    location.innerText = weatherObject.location;
     currentTemperature.innerText = weatherObject.currentTemperature;
-
+    currentWeatherStatus.innerText = weatherObject.currentWeatherStatus;
+    highTemperature.innerText = weatherObject.highTemperature;
+    lowTemperature.innerText = weatherObject.lowTemperature;
 }
 
 // function updateExtraDisplay(weatherObject) {
