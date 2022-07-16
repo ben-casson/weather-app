@@ -1,7 +1,7 @@
 export const Weather = (data) => {
     let location = data.name;
     let currentTemperature = Math.round(data.main.temp);
-    let currentWeatherStatus = data.weather.main;
+    let currentWeatherStatus = data.weather[0].main;
     let highTemperature = Math.round(data.main.temp_max);
     let lowTemperature = Math.round(data.main.temp_min);
     let sunrise = data.sys.sunrise;
