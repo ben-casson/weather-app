@@ -1,10 +1,12 @@
-//for DOM functions
 import './styles.scss';
+import { isDaytime } from './utilities';
 
 //import api function to use in event listener
 //export updateDisplay to api-functions
 export function updateDisplay(weatherObject) {
     updateMainDisplay(weatherObject);
+    //updateExtraDisplay(weatherObject)
+    changeBackgroundImage(weatherObject);
 }
 
 const location = document.getElementById('current-location');
@@ -24,6 +26,44 @@ function updateMainDisplay(weatherObject) {
 // function updateExtraDisplay(weatherObject) {
     
 // }
+
+const pageContainer = document.getElementById('root');
+
+function setBackgroundImageBasedOnTimeOfDay(weatherObject, weatherStatus) {
+    if (isDaytime(weatherObject)) {
+        pageContainer.style.backgroundImage = `url(../src/assets/day-${weatherStatus}.jpg)`;
+    }
+    else {
+        pageContainer.style.backgroundImage = `url(../src/assets/night-${weatherStatus}.jpg)`;
+    }
+}
+
+function changeBackgroundImage(weatherObject) {
+    let weatherCondition = weatherObject.currentWeatherStatus;
+    switch (weatherCondition.toLowerCase()) {
+        case 'clouds':
+            setBackgroundImageBasedOnTimeOfDay(weatherObject, 'clouds');
+            break;
+        case 'thunderstorm':
+            setBackgroundImageBasedOnTimeOfDay(weatherObject, 'thunderstorm');
+            break;
+        case 'snow':
+            setBackgroundImageBasedOnTimeOfDay(weatherObject, 'snow');
+            break;
+        case 'clear':
+            setBackgroundImageBasedOnTimeOfDay(weatherObject, 'clear');
+            break;
+        case 'drizzle':
+            setBackgroundImageBasedOnTimeOfDay(weatherObject, 'rain');
+            break;
+        case 'rain':
+            setBackgroundImageBasedOnTimeOfDay(weatherObject, 'clear');
+            break;
+        default:
+            setBackgroundImageBasedOnTimeOfDay(weatherObject, 'mist');
+            break;    
+    }
+}
 
 const userInput = document.getElementById('userInput');
 const searchButton = document.getElementById('search-button');
