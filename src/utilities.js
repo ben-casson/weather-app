@@ -1,10 +1,9 @@
-export function isDaytime(weatherObject) {
-    const secondsSinceEpoch = Math.round(Date.now() / 1000);
-    if (secondsSinceEpoch > weatherObject.sunrise && 
-        secondsSinceEpoch < weatherObject.sunrise) {
-        return true;
+export function setTimeOfDay(weatherObject) {
+    const secondsSinceEpoch = parseInt(Math.round(Date.now() / 1000));
+    if (secondsSinceEpoch > weatherObject.sunrise && secondsSinceEpoch < weatherObject.sunset) {
+        weatherObject.timeOfDay = 'daytime';
     }
     else {
-        return false;
+        weatherObject.timeOfDay = 'nighttime';
     }
 }
