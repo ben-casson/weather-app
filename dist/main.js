@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api-functions */ \"./src/api-functions.js\");\n\n(0,_api_functions__WEBPACK_IMPORTED_MODULE_0__.fetchWeatherData)('Chicago');\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api-functions */ \"./src/api-functions.js\");\n\n(0,_api_functions__WEBPACK_IMPORTED_MODULE_0__.fetchWeatherData)('New York');\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ }),
 
