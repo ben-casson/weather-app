@@ -1,5 +1,5 @@
 import './styles.scss';
-import { isDaytime } from './utilities';
+import { setTimeOfDay } from './utilities';
 
 //import api function to use in event listener
 //export updateDisplay to api-functions
@@ -30,7 +30,8 @@ function updateMainDisplay(weatherObject) {
 const pageContainer = document.getElementById('root');
 
 function setBackgroundImageBasedOnTimeOfDay(weatherObject, weatherStatus) {
-    if (isDaytime(weatherObject)) {
+    setTimeOfDay(weatherObject);
+    if (weatherObject.timeOfDay == 'daytime') {
         pageContainer.style.backgroundImage = `url(../src/assets/day-${weatherStatus}.jpg)`;
     }
     else {
@@ -57,7 +58,7 @@ function changeBackgroundImage(weatherObject) {
             setBackgroundImageBasedOnTimeOfDay(weatherObject, 'rain');
             break;
         case 'rain':
-            setBackgroundImageBasedOnTimeOfDay(weatherObject, 'clear');
+            setBackgroundImageBasedOnTimeOfDay(weatherObject, 'rain');
             break;
         default:
             setBackgroundImageBasedOnTimeOfDay(weatherObject, 'mist');
