@@ -1,5 +1,6 @@
 import './styles.scss';
 
+const pageContainer = document.getElementById('root');
 const location = document.getElementById('current-location');
 const currentTemperature = document.getElementById('current-temperature-number');
 const currentWeatherStatus = document.getElementById('current-temperature-status');
@@ -12,8 +13,6 @@ export function updateDisplay(weatherObject) {
     currentWeatherStatus.innerText = weatherObject.currentWeatherStatus;
     highTemperature.innerText = weatherObject.highTemperature;
     lowTemperature.innerText = weatherObject.lowTemperature;
-
-    const pageContainer = document.getElementById('root');
 
     function setBackgroundImage(weatherObject, weatherStatus) {
         weatherObject.setTimeOfDay();
