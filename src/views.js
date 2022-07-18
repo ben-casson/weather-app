@@ -1,8 +1,4 @@
 import './styles.scss';
-import { setTimeOfDay } from './utilities';
-
-//import api function to use in event listener
-//export updateDisplay to api-functions
 
 const location = document.getElementById('current-location');
 const currentTemperature = document.getElementById('current-temperature-number');
@@ -20,7 +16,7 @@ export function updateDisplay(weatherObject) {
     const pageContainer = document.getElementById('root');
 
     function setBackgroundImage(weatherObject, weatherStatus) {
-        setTimeOfDay(weatherObject);
+        weatherObject.setTimeOfDay();
         if (weatherObject.timeOfDay == 'daytime') {
             pageContainer.style.backgroundImage = `url(../src/assets/day-${weatherStatus}.jpg)`;
         }
