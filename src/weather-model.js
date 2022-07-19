@@ -3,12 +3,9 @@ export const Weather = (data) => {
     let timeOfDay = '';
     const setTimeOfDay = function() {
         const secondsSinceEpoch = parseInt(Math.round(Date.now() / 1000));
-        if (secondsSinceEpoch > this.sunrise && secondsSinceEpoch < this.sunset) {
-            this.timeOfDay = 'daytime';
-        }
-        else {
-            this.timeOfDay = 'nighttime';
-        }
+        (secondsSinceEpoch > this.sunrise && secondsSinceEpoch < this.sunset)
+            ? this.timeOfDay = 'daytime'
+            : this.timeOfDay = 'nighttime';
     };
     
     let location = data.name;
