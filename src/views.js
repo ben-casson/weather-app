@@ -15,9 +15,27 @@ function displayMainData(weatherObject) {
     lowTemperature.innerText = weatherObject.lowTemperature;
 }
 
-// function displayExtraData(weatherObject) {
 
-// }
+const sunrise = document.getElementById('sunrise-time');
+const sunset = document.getElementById('sunset-time');
+const precipitation = document.getElementById('precipitation-value');
+const feelsLikeTemperature = document.getElementById('feels-like-temperature-value');
+const humidity = document.getElementById('humidity-value');
+const wind = document.getElementById('wind-value');
+const pressure = document.getElementById('pressure-value');
+const visibility = document.getElementById('visibility-value');
+
+function displayExtraData(weatherObject) {
+    sunrise.innerText = weatherObject.sunrise;
+    sunset.innerText = weatherObject.sunset;
+    precipitation.innerText = weatherObject.precipitation;
+    feelsLikeTemperature.innerText = weatherObject.feelsLikeTemperature;
+    humidity.innerText = weatherObject.humidity;
+    wind.innerText = weatherObject.wind;
+    pressure.innerText = weatherObject.pressure;
+    visibility.innerText = weatherObject.visibility;
+}
+
 
 function setBackgroundImage(weatherObject, weatherStatus) {
     weatherObject.setTimeOfDay();
@@ -26,9 +44,10 @@ function setBackgroundImage(weatherObject, weatherStatus) {
       : pageContainer.style.backgroundImage = `url(../src/assets/night-${weatherStatus}.jpg)`;
 }
 
+
 export function updateDisplay(weatherObject) {
     displayMainData(weatherObject);
-    //displayExtraData(weatherObject);
+    displayExtraData(weatherObject);
 
     let weatherCondition = (weatherObject.currentWeatherStatus).toLowerCase();
     switch (weatherCondition) {
@@ -57,6 +76,7 @@ export function updateDisplay(weatherObject) {
             break;    
     }
 }
+
 
 const userInput = document.getElementById('user-input');
 const searchButton = document.getElementById('search-button');
