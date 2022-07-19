@@ -10,9 +10,11 @@ export function runApp() {
     document.addEventListener('keyup', (e) => {
         if (userInput.value.trim() != '' && e.key === 'Enter') {
             fetchWeatherData(userInput.value);
+            userInput.value = '';
         }
     });
     searchButton.addEventListener('click', () => {
         if (userInput.value.trim() != '') fetchWeatherData(userInput.value);
+        userInput.value = '';
     });
 }
