@@ -46,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"updateDisplay\": () => (/* binding */ updateDisplay)\n/* harmony export */ });\n/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.scss */ \"./src/styles.scss\");\n\nvar pageContainer = document.getElementById('root');\nvar location = document.getElementById('current-location');\nvar currentTemperature = document.getElementById('current-temperature-number');\nvar currentWeatherStatus = document.getElementById('current-temperature-status');\nvar highTemperature = document.getElementById('high-temperature');\nvar lowTemperature = document.getElementById('low-temperature');\nfunction updateDisplay(weatherObject) {\n  location.innerText = weatherObject.location;\n  currentTemperature.innerText = weatherObject.currentTemperature;\n  currentWeatherStatus.innerText = weatherObject.currentWeatherStatus;\n  highTemperature.innerText = weatherObject.highTemperature;\n  lowTemperature.innerText = weatherObject.lowTemperature;\n\n  function setBackgroundImage(weatherObject, weatherStatus) {\n    weatherObject.setTimeOfDay();\n\n    if (weatherObject.timeOfDay == 'daytime') {\n      pageContainer.style.backgroundImage = \"url(../src/assets/day-\".concat(weatherStatus, \".jpg)\");\n    } else {\n      pageContainer.style.backgroundImage = \"url(../src/assets/night-\".concat(weatherStatus, \".jpg)\");\n    }\n  }\n\n  (function (weatherObject) {\n    var weatherCondition = weatherObject.currentWeatherStatus.toLowerCase();\n\n    switch (weatherCondition) {\n      case 'clouds':\n        setBackgroundImage(weatherObject, 'clouds');\n        break;\n\n      case 'thunderstorm':\n        setBackgroundImage(weatherObject, 'thunderstorm');\n        break;\n\n      case 'snow':\n        setBackgroundImage(weatherObject, 'snow');\n        break;\n\n      case 'clear':\n        setBackgroundImage(weatherObject, 'clear');\n        break;\n\n      case 'drizzle':\n        setBackgroundImage(weatherObject, 'rain');\n        break;\n\n      case 'rain':\n        setBackgroundImage(weatherObject, 'rain');\n        break;\n      //several rare conditions with no relevant image\n      //many of them are similar to 'mist'\n\n      default:\n        setBackgroundImage(weatherObject, 'mist');\n        break;\n    }\n  })(weatherObject);\n}\nvar userInput = document.getElementById('userInput');\nvar searchButton = document.getElementById('search-button');\n\n//# sourceURL=webpack://weather-app/./src/views.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"updateDisplay\": () => (/* binding */ updateDisplay)\n/* harmony export */ });\n/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.scss */ \"./src/styles.scss\");\n\nvar pageContainer = document.getElementById('root');\nvar location = document.getElementById('current-location');\nvar currentTemperature = document.getElementById('current-temperature-number');\nvar currentWeatherStatus = document.getElementById('current-temperature-status');\nvar highTemperature = document.getElementById('high-temperature');\nvar lowTemperature = document.getElementById('low-temperature');\nfunction updateDisplay(weatherObject) {\n  location.innerText = weatherObject.location;\n  currentTemperature.innerText = weatherObject.currentTemperature;\n  currentWeatherStatus.innerText = weatherObject.currentWeatherStatus;\n  highTemperature.innerText = weatherObject.highTemperature;\n  lowTemperature.innerText = weatherObject.lowTemperature;\n\n  function setBackgroundImage(weatherObject, weatherStatus) {\n    weatherObject.setTimeOfDay();\n\n    if (weatherObject.timeOfDay == 'daytime') {\n      pageContainer.style.backgroundImage = \"url(../src/assets/day-\".concat(weatherStatus, \".jpg)\");\n    } else {\n      pageContainer.style.backgroundImage = \"url(../src/assets/night-\".concat(weatherStatus, \".jpg)\");\n    }\n  }\n\n  (function (weatherObject) {\n    var weatherCondition = weatherObject.currentWeatherStatus.toLowerCase();\n\n    switch (weatherCondition) {\n      case 'clouds':\n        setBackgroundImage(weatherObject, 'clouds');\n        break;\n\n      case 'thunderstorm':\n        setBackgroundImage(weatherObject, 'thunderstorm');\n        break;\n\n      case 'snow':\n        setBackgroundImage(weatherObject, 'snow');\n        break;\n\n      case 'clear':\n        setBackgroundImage(weatherObject, 'clear');\n        break;\n\n      case 'drizzle':\n        setBackgroundImage(weatherObject, 'rain');\n        break;\n\n      case 'rain':\n        setBackgroundImage(weatherObject, 'rain');\n        break;\n      //several rare conditions with no relevant image\n      //many of them are similar to 'mist'\n\n      default:\n        setBackgroundImage(weatherObject, 'mist');\n        break;\n    }\n  })(weatherObject);\n}\nvar userInput = document.getElementById('user-input');\nvar searchButton = document.getElementById('search-button');\n\n//# sourceURL=webpack://weather-app/./src/views.js?");
 
 /***/ }),
 
@@ -66,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"*,\\n::before,\\n::after {\\n  box-sizing: border-box;\\n  margin: 0;\\n  padding: 0;\\n}\\n\\nhtml,\\nbody {\\n  width: 100%;\\n  height: 100%;\\n  font-family: Arial, Helvetica, sans-serif;\\n}\\n\\nimg,\\npicture {\\n  max-width: 100%;\\n  display: block;\\n}\\n\\n#root {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  width: 100%;\\n  height: 100%;\\n  background-size: cover;\\n  background-repeat: no-repeat;\\n  background-attachment: fixed;\\n  background-position: center;\\n  overflow-y: scroll;\\n}\\n\\nmain {\\n  height: 40vh;\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  margin: 20px 0;\\n}\\n\\n#main-content-container {\\n  display: grid;\\n  grid-template-areas: \\\"a\\\" \\\"b\\\" \\\"c\\\" \\\"d\\\";\\n  gap: 5px;\\n}\\n\\n#current-location {\\n  grid-area: a;\\n  justify-self: center;\\n  font-size: 8vmin;\\n}\\n\\n#current-temperature-container {\\n  grid-area: b;\\n  position: relative;\\n  display: flex;\\n  justify-content: center;\\n  margin: -5px;\\n}\\n\\n#current-temperature-number {\\n  font-size: 22vmin;\\n}\\n\\n#current-temperature-unit {\\n  position: absolute;\\n  left: 31vmin;\\n  display: flex;\\n  align-items: flex-start;\\n  line-height: 13vmin;\\n  font-size: 5vmin;\\n  font-weight: bold;\\n}\\n\\n#current-temperature-status {\\n  grid-area: c;\\n  display: flex;\\n  justify-content: center;\\n  font-weight: bold;\\n}\\n\\n#high-low-temperature-container {\\n  grid-area: d;\\n  display: flex;\\n  justify-content: center;\\n  gap: 15px;\\n  font-weight: bold;\\n}\\n\\n#high-temperature-container {\\n  display: flex;\\n  justify-content: center;\\n}\\n\\n#low-temperature-container {\\n  display: flex;\\n  justify-content: center;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://weather-app/./src/styles.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);\n// Imports\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/fonts/Lato-Regular.ttf */ \"./src/assets/fonts/Lato-Regular.ttf\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/fonts/Lato-Bold.ttf */ \"./src/assets/fonts/Lato-Bold.ttf\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/day-rain.jpg */ \"./src/assets/day-rain.jpg\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);\nvar ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);\nvar ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"@font-face {\\n  font-family: \\\"Lato\\\";\\n  src: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\n}\\n@font-face {\\n  font-family: \\\"Lato Bold\\\";\\n  src: url(\" + ___CSS_LOADER_URL_REPLACEMENT_1___ + \");\\n}\\n*,\\n::before,\\n::after {\\n  box-sizing: border-box;\\n  margin: 0;\\n  padding: 0;\\n}\\n\\nhtml,\\nbody {\\n  width: 100%;\\n  height: 100%;\\n  font-family: \\\"Lato\\\", Arial, Helvetica, sans-serif;\\n  color: white;\\n}\\n\\nimg,\\npicture {\\n  max-width: 100%;\\n  display: block;\\n}\\n\\n#root {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  width: 100%;\\n  height: 100%;\\n  background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_2___ + \");\\n  background-size: cover;\\n  background-repeat: no-repeat;\\n  background-attachment: fixed;\\n  background-position: center;\\n  overflow-y: scroll;\\n}\\n\\nmain {\\n  width: 90vw;\\n  height: 40vh;\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  margin-top: 20px;\\n  background-color: rgba(29, 52, 83, 0.3960784314);\\n  backdrop-filter: blur(30px);\\n  -webkit-backdrop-filter: blur(30px);\\n  border-radius: 15px;\\n}\\n\\n#main-content-container {\\n  display: grid;\\n  grid-template-areas: \\\"a\\\" \\\"b\\\" \\\"c\\\" \\\"d\\\";\\n  gap: 5px;\\n}\\n\\n#current-location {\\n  grid-area: a;\\n  justify-self: center;\\n  font-size: 8vmin;\\n}\\n\\n#current-temperature-container {\\n  grid-area: b;\\n  position: relative;\\n  display: flex;\\n  justify-content: center;\\n  margin: -5px;\\n}\\n\\n#current-temperature-number {\\n  font-size: 22vmin;\\n}\\n\\n#current-temperature-unit {\\n  position: absolute;\\n  left: 31vmin;\\n  display: flex;\\n  align-items: flex-start;\\n  line-height: 13vmin;\\n  font-size: 5vmin;\\n}\\n\\n#current-temperature-status {\\n  grid-area: c;\\n  display: flex;\\n  justify-content: center;\\n}\\n\\n#high-low-temperature-container {\\n  grid-area: d;\\n  display: flex;\\n  justify-content: center;\\n  gap: 15px;\\n}\\n\\n#high-temperature-container {\\n  display: flex;\\n  justify-content: center;\\n}\\n\\n#low-temperature-container {\\n  display: flex;\\n  justify-content: center;\\n}\\n\\nsection {\\n  margin-top: 20px;\\n}\\n\\n#search-and-unit-of-temperature-container {\\n  width: 90vw;\\n  display: flex;\\n  flex-direction: column;\\n  background-color: rgba(0, 55, 128, 0.3294117647);\\n  border-radius: 15px;\\n  padding: 20px;\\n  gap: 20px;\\n}\\n\\n#search-container {\\n  display: flex;\\n  width: 100%;\\n  border-bottom: 1px solid white;\\n}\\n\\n#user-input {\\n  background-color: transparent;\\n  flex-grow: 1;\\n  padding-top: 10px;\\n  padding-left: 5px;\\n  border: none;\\n  font-size: 14px;\\n  letter-spacing: 0.8px;\\n}\\n\\n::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\\n  color: white;\\n  opacity: 1; /* Firefox */\\n}\\n\\n::-ms-input-placeholder { /* Microsoft Edge */\\n  color: white;\\n}\\n\\n#user-input:focus {\\n  border: none;\\n  outline: none;\\n  background-color: beige;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://weather-app/./src/styles.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -77,6 +77,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module) => {
 
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n\n      content += cssWithMappingToString(item);\n\n      if (needLayer) {\n        content += \"}\";\n      }\n\n      if (item[2]) {\n        content += \"}\";\n      }\n\n      if (item[4]) {\n        content += \"}\";\n      }\n\n      return content;\n    }).join(\"\");\n  }; // import a list of modules into the list\n\n\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var k = 0; k < this.length; k++) {\n        var id = this[k][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _k = 0; _k < modules.length; _k++) {\n      var item = [].concat(modules[_k]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\n//# sourceURL=webpack://weather-app/./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    options = {};\n  }\n\n  if (!url) {\n    return url;\n  }\n\n  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack://weather-app/./node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -158,6 +168,36 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://weather-app/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
 
+/***/ }),
+
+/***/ "./src/assets/day-rain.jpg":
+/*!*********************************!*\
+  !*** ./src/assets/day-rain.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"b1aa3827750821da3769.jpg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/day-rain.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/Lato-Bold.ttf":
+/*!****************************************!*\
+  !*** ./src/assets/fonts/Lato-Bold.ttf ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"636be8de934918e38ed9.ttf\";\n\n//# sourceURL=webpack://weather-app/./src/assets/fonts/Lato-Bold.ttf?");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/Lato-Regular.ttf":
+/*!*******************************************!*\
+  !*** ./src/assets/fonts/Lato-Regular.ttf ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"9d883d540ee2b4de8024.ttf\";\n\n//# sourceURL=webpack://weather-app/./src/assets/fonts/Lato-Regular.ttf?");
+
 /***/ })
 
 /******/ 	});
@@ -186,6 +226,9 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -211,6 +254,18 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -225,6 +280,52 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
