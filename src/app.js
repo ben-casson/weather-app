@@ -7,6 +7,11 @@ export function runApp() {
     //window.onload = () => {
     //     fetchWeatherData('Morgantown');
     // }
+    document.addEventListener('keyup', (e) => {
+        if (userInput.value.trim() != '' && e.key === 'Enter') {
+            fetchWeatherData(userInput.value);
+        }
+    });
     searchButton.addEventListener('click', () => {
         if (userInput.value.trim() != '') fetchWeatherData(userInput.value);
     });
