@@ -1,5 +1,5 @@
 # weather-app
-This app can display details about the weather in over 200,000 cities. Information about the weather a particular city will be shown after searching for that location. 
+This app can display details about the weather in over 200,000 cities.
 
 <br>
 <br>
