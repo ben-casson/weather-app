@@ -55,11 +55,14 @@ picture {
 
 main {
   width: 90vw;
-  height: 40vh;
+  height: auto;
+  // max-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #1d345365;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -78,7 +81,7 @@ main {
 #current-location {
   grid-area: a;
   justify-self: center;
-  font-size: 8vmin;
+  font-size: 10vmin;
 }
 
 #current-temperature-container {
@@ -90,7 +93,7 @@ main {
 }
 
 #current-temperature-number {
-  font-size: 22vmin;
+  font-size: 25vmin;
 }
 
 #current-temperature-unit {
