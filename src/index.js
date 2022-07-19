@@ -1,3 +1,3 @@
-import { fetchWeatherData } from "./api-functions";
+import { runApp } from "./app";
 
-// fetchWeatherData('Morgantown');
+runApp();
