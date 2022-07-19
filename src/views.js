@@ -16,12 +16,9 @@ export function updateDisplay(weatherObject) {
 
     function setBackgroundImage(weatherObject, weatherStatus) {
         weatherObject.setTimeOfDay();
-        if (weatherObject.timeOfDay == 'daytime') {
-            pageContainer.style.backgroundImage = `url(../src/assets/day-${weatherStatus}.jpg)`;
-        }
-        else {
-            pageContainer.style.backgroundImage = `url(../src/assets/night-${weatherStatus}.jpg)`;
-        }
+        weatherObject.timeOfDay == 'daytime' ?
+            pageContainer.style.backgroundImage = `url(../src/assets/day-${weatherStatus}.jpg)`
+          : pageContainer.style.backgroundImage = `url(../src/assets/night-${weatherStatus}.jpg)`;
     }
 
     ((weatherObject) => {
