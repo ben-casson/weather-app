@@ -54,5 +54,5 @@ export function updateDisplay(weatherObject) {
     })(weatherObject);
 }
 
-const userInput = document.getElementById('userInput');
+const userInput = document.getElementById('user-input');
 const searchButton = document.getElementById('search-button');
