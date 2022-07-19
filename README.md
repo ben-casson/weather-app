@@ -2,7 +2,6 @@
 This app can display details about the weather in over 200,000 cities.
 
 <br>
-<br>
 
 ### Technologies
 - [Webpack](https://webpack.js.org/)
