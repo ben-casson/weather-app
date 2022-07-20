@@ -86,11 +86,12 @@ $night-thunderstorm-color2: #262038;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 
 main {
   width: 90vw;
+  max-width: 500px;
   height: auto;
   display: flex;
   align-items: center;
@@ -163,9 +164,25 @@ main {
   justify-content: center;
 }
 
+@media (min-width: 600px) {
+  main {
+    max-height: 330px;
+  }
+
+  #current-location {
+    font-size: 20px;
+  }
+
+  #current-temperature-number {
+    font-size: 150px;
+  }
+}
+
 
 //Additional Weather Information
 section {
+  width: 90vw;
+  max-width: 500px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -173,7 +190,6 @@ section {
 }
 
 .extra-info-container {
-  width: 90vw;
   display: flex;
   flex-direction: column;
   background-color: #3e385285; //night-clear #1d345365, night-rain #15211d6c
