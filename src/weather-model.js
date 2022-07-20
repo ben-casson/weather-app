@@ -5,7 +5,7 @@ export const Weather = (data) => {
     let timeOfDay = '';
     const setTimeOfDay = function() {
         const secondsSinceEpoch = parseInt(Math.round(Date.now() / 1000));
-        (secondsSinceEpoch > this.sunrise && secondsSinceEpoch < this.sunset)
+        (secondsSinceEpoch > this.sunriseEpoch && secondsSinceEpoch < this.sunsetEpoch)
             ? this.timeOfDay = 'daytime'
             : this.timeOfDay = 'nighttime';
     };
@@ -15,6 +15,8 @@ export const Weather = (data) => {
     let currentWeatherStatus = data.weather[0].main;
     let highTemperature = Math.round(data.main.temp_max);
     let lowTemperature = Math.round(data.main.temp_min);
+    let sunriseEpoch = parseInt(data.sys.sunrise);
+    let sunsetEpoch = parseInt(data.sys.sunset);
     let sunrise = convertEpochToNormalTime(parseInt(data.sys.sunrise));
     let sunset = convertEpochToNormalTime(parseInt(data.sys.sunset));
     let precipitation = data.rain + 'mm' ?? '0mm';
@@ -25,6 +27,6 @@ export const Weather = (data) => {
     let visibility = data.main.visibility;
 
     return { timeOfDay, setTimeOfDay, location, currentTemperature, currentWeatherStatus, 
-             highTemperature, lowTemperature, sunrise, sunset, precipitation, 
-             feelsLikeTemperature, humidity, wind, pressure, visibility };
+             highTemperature, lowTemperature, sunriseEpoch, sunsetEpoch, sunrise, sunset, 
+             precipitation, feelsLikeTemperature, humidity, wind, pressure, visibility };
 }
