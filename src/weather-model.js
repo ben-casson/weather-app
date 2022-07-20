@@ -1,3 +1,5 @@
+import { convertEpochToNormalTime } from "./utilities";
+
 export const Weather = (data) => {
 
     let timeOfDay = '';
@@ -13,8 +15,8 @@ export const Weather = (data) => {
     let currentWeatherStatus = data.weather[0].main;
     let highTemperature = Math.round(data.main.temp_max);
     let lowTemperature = Math.round(data.main.temp_min);
-    let sunrise = parseInt(data.sys.sunrise);
-    let sunset = parseInt(data.sys.sunset);
+    let sunrise = convertEpochToNormalTime(parseInt(data.sys.sunrise));
+    let sunset = convertEpochToNormalTime(parseInt(data.sys.sunset));
     let precipitation = data.rain + 'mm' ?? '0mm';
     let feelsLikeTemperature = Math.round(data.main.feels_like);
     let humidity = Math.round(data.main.humidity) + '%';
