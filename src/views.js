@@ -26,13 +26,13 @@ const pressure = document.getElementById('pressure-value');
 const visibility = document.getElementById('visibility-value');
 
 function displayExtraData(weatherObject) {
-    sunrise.innerText = weatherObject.sunrise + 'AM';
-    sunset.innerText = weatherObject.sunset + 'PM';
-    precipitation.innerText = weatherObject.precipitation;
+    sunrise.innerText = weatherObject.sunrise + ' AM';
+    sunset.innerText = weatherObject.sunset + ' PM';
+    precipitation.innerText = weatherObject.precipitation + ' mm';
     feelsLikeTemperature.innerText = weatherObject.feelsLikeTemperature;
     humidity.innerText = weatherObject.humidity;
-    wind.innerText = weatherObject.wind;
-    pressure.innerText = weatherObject.pressure;
+    wind.innerText = weatherObject.wind + ' mph';
+    pressure.innerText = weatherObject.pressure + ' hPa';
     visibility.innerText = weatherObject.visibility;
 }
 
@@ -76,3 +76,7 @@ export function updateDisplay(weatherObject) {
             break;    
     }
 }
+
+
+const fahrenheitButton = document.getElementById('fahrenheit-button');
+const celsiusButton = document.getElementById('celsius-button');
