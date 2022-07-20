@@ -40,8 +40,8 @@ function displayExtraData(weatherObject) {
 function setBackgroundImage(weatherObject, weatherStatus) {
     weatherObject.setTimeOfDay();
     weatherObject.timeOfDay == 'daytime' ?
-        pageContainer.style.backgroundImage = `url(../dist/assets/images/day-${weatherStatus}.jpg)`
-      : pageContainer.style.backgroundImage = `url(../dist/assets/images/night-${weatherStatus}.jpg)`;
+        pageContainer.style.backgroundImage = `url(../dist/images/day-${weatherStatus}.jpg)`
+      : pageContainer.style.backgroundImage = `url(../dist/images/night-${weatherStatus}.jpg)`;
 }
 
 
