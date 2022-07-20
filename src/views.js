@@ -26,8 +26,8 @@ const pressure = document.getElementById('pressure-value');
 const visibility = document.getElementById('visibility-value');
 
 function displayExtraData(weatherObject) {
-    sunrise.innerText = weatherObject.sunrise;
-    sunset.innerText = weatherObject.sunset;
+    sunrise.innerText = weatherObject.sunrise + 'AM';
+    sunset.innerText = weatherObject.sunset + 'PM';
     precipitation.innerText = weatherObject.precipitation;
     feelsLikeTemperature.innerText = weatherObject.feelsLikeTemperature;
     humidity.innerText = weatherObject.humidity;
