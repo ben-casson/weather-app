@@ -116,6 +116,7 @@ main {
   grid-area: a;
   justify-self: center;
   font-size: 7vmin;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.534);
 }
 
 #current-temperature-container {
@@ -132,19 +133,20 @@ main {
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.534);
 }
 
-#current-temperature-unit {
-  position: absolute;
-  left: 31vmin;
-  display: flex;
-  align-items: flex-start;
-  line-height: 13vmin;
-  font-size: 5vmin;
-}
+// #current-temperature-unit {
+//   position: absolute;
+//   left: 31vmin;
+//   display: flex;
+//   align-items: flex-start;
+//   line-height: 13vmin;
+//   font-size: 5vmin;
+// }
 
 #current-temperature-status {
   grid-area: c;
   display: flex;
   justify-content: center;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.534);
 }
 
 #high-low-temperature-container {
@@ -157,11 +159,13 @@ main {
 #high-temperature-container {
   display: flex;
   justify-content: center;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.534);
 }
 
 #low-temperature-container {
   display: flex;
   justify-content: center;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.534);
 }
 
 @media (min-width: 600px) {
@@ -170,11 +174,17 @@ main {
   }
 
   #current-location {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   #current-temperature-number {
     font-size: 150px;
+  }
+
+  #high-temperature-container,
+  #low-temperature-container,
+  #current-temperature-status {
+    font-size: 20px;
   }
 }
 
