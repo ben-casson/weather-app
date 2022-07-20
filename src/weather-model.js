@@ -18,8 +18,8 @@ export const Weather = (data) => {
     let sunriseEpoch = parseInt(data.sys.sunrise);
     let sunsetEpoch = parseInt(data.sys.sunset);
     let sunrise = convertEpochToNormalTime(parseInt(data.sys.sunrise));
-    let sunset = convertEpochToNormalTime(parseInt(data.sys.sunset));
-    let precipitation = data.rain + 'mm' ?? '0mm';
+    let sunset = convertEpochToNormalTime(parseInt(data.sys.sunset) - 43200);
+    let precipitation = data.rain ?? '0';
     let feelsLikeTemperature = Math.round(data.main.feels_like);
     let humidity = Math.round(data.main.humidity) + '%';
     let wind = Math.round(data.wind.speed);
