@@ -1,5 +1,6 @@
 # weather-app
 This app can display details about the weather in over 200,000 cities.
+
 [Live site](https://ben-casson.github.io/weather-app/)
 
 <br>
