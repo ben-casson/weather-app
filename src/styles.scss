@@ -86,7 +86,7 @@ $night-thunderstorm-color2: #262038;
   // background-repeat: no-repeat;
   // background-attachment: fixed;
   // background-position: center; 
-  background-color: #111827;
+  background-color: #2d313a;
   overflow-y: scroll;
 }
 
@@ -203,7 +203,7 @@ section {
 .extra-info-container {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff11; //night-clear #1d345365, night-rain #15211d6c
+  background-color: #00000060; //night-clear #1d345365, night-rain #15211d6c
   border-radius: 15px;
   padding: 20px;
   gap: 20px;
@@ -244,13 +244,13 @@ section {
   height: 45px;
   margin-top:  10px;
   display: flex;
-  border: 2px solid #000;
+  border: 2px solid #2d313a;
   border-radius: 7px;
 }
 
 #fahrenheit-button {
   flex-grow: 1;
-  background-color: #000;
+  background-color: #2d313a;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   font-size: 18px;
