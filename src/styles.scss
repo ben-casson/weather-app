@@ -26,7 +26,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Lato", Arial, Helvetica, sans-serif;
-  color: white;
+  color: black;
   letter-spacing: 1px;
 }
 img,
@@ -42,36 +42,6 @@ button:hover {
   cursor: pointer;
 }
 
-//VARIABLES --------------------------------------------------------------------
-$day-clear-color1: #34b6d77a;
-$day-clear-color2: #1a90ad;
-$day-clouds-color1: #7b77909c;
-$day-clouds-color2: #665f8a;
-$day-mist-color1: #5e5a5b49;
-$day-mist-color2: #4b3e41dc;
-$day-rain-color1: #636e7469;
-$day-rain-color2: #4f5d64;
-$day-snow-color1: #88baddc7;
-$day-snow-color2: #5594c0;
-$day-thunderstorm-color1: #53758994;
-$day-thunderstorm-color2: #3b5d70;
-$night-clear-color1: #1d345365;
-$night-clear-color2: #010c1a;
-$night-clouds-color1: #01345063;
-$night-clouds-color2: #05131b;
-$night-mist-color1: #17281e56;
-$night-mist-color2: #030c07;
-$night-rain-green1: #15211d6c;
-$night-rain-green2: #5e867e;
-$night-snow-color1: #0D181C;
-$night-snow-color2: #03080a;
-$night-thunderstorm-color1: #3e385285;
-$night-thunderstorm-color2: #262038;
-
-
-//MIXINS -----------------------------------------------------------------------
-
-
 //STYLES -----------------------------------------------------------------------
 
 //Main
@@ -81,12 +51,8 @@ $night-thunderstorm-color2: #262038;
   align-items: center;
   width:100%;
   height:100%;  
-  // background-image: url(./assets/images/night-thunderstorm.jpg);// TEMP!!!
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  // background-position: center; 
-  background-color: #2d313a;
+  // background-color: #2d313a;
+  background-color: #fdf2de;
   overflow-y: scroll;
 }
 
@@ -203,7 +169,7 @@ section {
 .extra-info-container {
   display: flex;
   flex-direction: column;
-  background-color: #00000060; //night-clear #1d345365, night-rain #15211d6c
+  background-color: rgba(221, 214, 187, 0.38); //night-clear #1d345365, night-rain #15211d6c
   border-radius: 15px;
   padding: 20px;
   gap: 20px;
@@ -248,24 +214,29 @@ section {
   border-radius: 7px;
 }
 
-#fahrenheit-button {
+#fahrenheit-button,
+#celsius-button {
   flex-grow: 1;
-  background-color: #2d313a;
+  font-size: 18px;
+  padding-right: 5px;
+  color: black;
+  background-color: transparent;
+}
+
+#fahrenheit-button {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  font-size: 18px;
-  color: white;
-  padding-right: 5px;
 }
 
 #celsius-button {
-  flex-grow: 1;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  background-color: transparent;
-  font-size: 18px;
+}
+
+#fahrenheit-button.selected,
+#celsius-button.selected {
+  background-color: #2d313a;
   color: white;
-  padding-right: 5px;
 }
 
 .info-wrapper {
