@@ -1,5 +1,5 @@
 # weather-app
-This app can display details about the weather in over 200,000 cities.
+This app can display details about the weather in over 200,000 cities. It fetches relevant data for that weather using the OpenWeather API. 
 
 [Live site](https://ben-casson.github.io/weather-app/)
 
@@ -8,6 +8,3 @@ This app can display details about the weather in over 200,000 cities.
 - [Babel](https://babeljs.io/)
 - [Sass](https://sass-lang.com/)
 - [OpenWeather API](https://openweathermap.org/current)
-
-
-*Note: This site is not yet finished*. 
