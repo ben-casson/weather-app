@@ -32,10 +32,10 @@ const visibility = document.getElementById('visibility-value');
 function displayExtraData(weatherObject) {
     sunrise.innerText = weatherObject.sunrise + ' AM';
     sunset.innerText = weatherObject.sunset + ' PM';
-    precipitation.innerText = weatherObject.precipitation + ' mm';
+    precipitation.innerText = fahrenheitButton.classList.contains('selected') ? weatherObject.precipitation + ' in ' : weatherObject.precipitation + ' mm';
     feelsLikeTemperature.innerText = weatherObject.feelsLikeTemperature;
     humidity.innerText = weatherObject.humidity;
-    wind.innerText = weatherObject.wind + ' mph';
+    wind.innerText = fahrenheitButton.classList.contains('selected') ? weatherObject.wind + ' mi/h' : weatherObject.wind + ' km/h'
     pressure.innerText = weatherObject.pressure + ' hPa';
     visibility.innerText = weatherObject.visibility;
 }
@@ -52,7 +52,6 @@ function changeUnits(button) {
             celsiusButton.classList.remove('selected');
             button.classList.add('selected');
             if (userInput.value.trim() != '') fetchWeatherData(userInput.value);
-            // userInput.value = '';
         }
     });
 }
