@@ -1,4 +1,9 @@
 import './styles.scss';
+import { fetchWeatherData } from './api-functions';
+import { userInput } from './app';
+
+export const fahrenheitButton = document.getElementById('fahrenheit-button');
+export const celsiusButton = document.getElementById('celsius-button');
 
 const pageContainer = document.getElementById('root');
 const location = document.getElementById('current-location');
@@ -14,7 +19,6 @@ function displayMainData(weatherObject) {
     highTemperature.innerText = weatherObject.highTemperature;
     lowTemperature.innerText = weatherObject.lowTemperature;
 }
-
 
 const sunrise = document.getElementById('sunrise-time');
 const sunset = document.getElementById('sunset-time');
@@ -36,47 +40,22 @@ function displayExtraData(weatherObject) {
     visibility.innerText = weatherObject.visibility;
 }
 
-
-// function setBackgroundImage(weatherObject, weatherStatus) {
-//     weatherObject.setTimeOfDay();
-//     weatherObject.timeOfDay == 'daytime' ?
-//         pageContainer.style.backgroundImage = `url(../images/day-${weatherStatus}.jpg)`
-//       : pageContainer.style.backgroundImage = `url(../images/night-${weatherStatus}.jpg)`;
-// }
-
-
 export function updateDisplay(weatherObject) {
     displayMainData(weatherObject);
     displayExtraData(weatherObject);
-
-    // let weatherCondition = (weatherObject.currentWeatherStatus).toLowerCase();
-    // switch (weatherCondition) {
-    //     case 'clouds':
-    //         setBackgroundImage(weatherObject, 'clouds');
-    //         break;
-    //     case 'thunderstorm':
-    //         setBackgroundImage(weatherObject, 'thunderstorm');
-    //         break;
-    //     case 'snow':
-    //         setBackgroundImage(weatherObject, 'snow');
-    //         break;
-    //     case 'clear':
-    //         setBackgroundImage(weatherObject, 'clear');
-    //         break;
-    //     case 'drizzle':
-    //         setBackgroundImage(weatherObject, 'rain');
-    //         break;
-    //     case 'rain':
-    //         setBackgroundImage(weatherObject, 'rain');
-    //         break;
-    //     //several rare conditions with no relevant image
-    //     //many of them are similar to 'mist'
-    //     default:
-    //         setBackgroundImage(weatherObject, 'mist');
-    //         break;    
-    // }
 }
 
+function changeUnits(button) {
+    button.addEventListener('click', () => {
+        if (!button.classList.contains('selected')) {
+            fahrenheitButton.classList.remove('selected');
+            celsiusButton.classList.remove('selected');
+            button.classList.add('selected');
+            if (userInput.value.trim() != '') fetchWeatherData(userInput.value);
+            // userInput.value = '';
+        }
+    });
+}
 
-const fahrenheitButton = document.getElementById('fahrenheit-button');
-const celsiusButton = document.getElementById('celsius-button');
+changeUnits(fahrenheitButton);
+changeUnits(celsiusButton);
